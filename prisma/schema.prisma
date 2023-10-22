@@ -27,7 +27,7 @@ model Product {
   imageUrls String[]
   categoryId String
   category Category @relation(fields: [categoryId], references: [id])
-  discountPercentage Int @default(0)
+  discountPercentage  Int @default(0)
 }
 
 model Account {
