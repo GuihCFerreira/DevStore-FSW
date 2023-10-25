@@ -9,10 +9,9 @@ interface ProductItemProps{
 
 const ProductItem = ({product} :ProductItemProps) => {
     return ( 
-        <div className="flex flex-col gap-4 max-w-[156px]">
+        <div className="flex flex-col gap-4 ">
 
-
-            <div className="bg-accent rounded-lg h-[170px] w-[156px] flex items-center justify-center relative">
+            <div className="bg-accent rounded-lg h-[170px] w-full flex items-center justify-center relative">
             <Image
           src={product.imageUrl}
           height={0}
@@ -38,13 +37,13 @@ const ProductItem = ({product} :ProductItemProps) => {
                 <div className="flex items-center gap-2">
                     {product.discountPercent > 0 ? (
                         <>
-                            <p className="font-semibold">R${product.totalPrice.toFixed(2)}</p>
+                            <p className="font-semibold overflow-hidden whitespace-nowrap text-ellipsis">R${product.totalPrice.toFixed(2)}</p>
 
-                            <p className="opacity-75 line-through text-xs">R$ {Number(product.basePrice).toFixed(2)}</p>
+                            <p className="opacity-75 line-through text-xs overflow-hidden whitespace-nowrap text-ellipsis">R$ {Number(product.basePrice).toFixed(2)}</p>
                         </>
                     ): (
                         <>
-                            <p className="font-semibold">R${product.basePrice.toFixed(2)}</p>
+                            <p className="font-semibold overflow-hidden whitespace-nowrap text-ellipsis">R${product.basePrice.toFixed(2)}</p>
                         </>
                     )}
 
