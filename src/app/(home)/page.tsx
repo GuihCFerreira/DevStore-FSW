@@ -30,22 +30,27 @@ export default async function Home() {
     },
   });
 
-  return <div>
+  return <div className='flex flex-col gap-8'>
   <PromoBanner src={banner1} alt='Até 55% de desconto esse mês' />
-  <div className="mt-8 px-5">
+  <div className=" px-5">
   <Categories/>
   </div>
-  <div className='mt-8 '>
+  <div >
     <SectionTitle className='font-bold uppercase pl-5 mb-3'>Ofertas</SectionTitle>
     <ProductList products={deals} />
   </div>
 
-
+  <div className="">
   <PromoBanner src={banner2} alt='Até 55% de desconto em mouses'/>
+  </div>
 
-<div className='mt-8 '>
+<div >
     <SectionTitle className='font-bold uppercase pl-5 mb-3'>Teclados</SectionTitle>
     <ProductList products={keyboards} />
+  </div>
+
+  <div>
+  <PromoBanner src={banner3} alt='Até 55% de desconto em mouses'/>
   </div>
 
 
