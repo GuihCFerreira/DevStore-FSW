@@ -7,7 +7,7 @@ import banner3 from '@/assets/banner_home_3.png'
 import Categories from './components/categories'
 import { prismaClient } from '@/lib/prisma'
 import ProductList from '../../components/ui/product-list'
-import SectionTitle from './components/section-title'
+import SectionTitle from '../../components/ui/section-title'
 import PromoBanner from './components/promo-banner'
 
 
