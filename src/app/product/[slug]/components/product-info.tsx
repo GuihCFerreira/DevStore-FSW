@@ -23,7 +23,7 @@ const ProductInfo = ({product:{name,basePrice, description, discountPercent, tot
     }
 
     return ( 
-        <div className="flex flex-col px-5 mb-8">
+        <div className="flex flex-col px-5">
             <h2 className="text-lg">{name}</h2>
             
             <div className="flex items-center gap-2">
@@ -57,7 +57,7 @@ const ProductInfo = ({product:{name,basePrice, description, discountPercent, tot
             <Button className="mt-8 uppercase font-bold">Adicionar ao carrinho</Button>
 
             <div className="flex bg-accent items-center px-5 py-2 justify-between mt-5 rounded-lg">
-                <div className="flex items-center">
+                <div className="flex items-center gap-2">
                     <TruckIcon/>
                     <div className="flex flex-col">
                     <p className="text-xs">
