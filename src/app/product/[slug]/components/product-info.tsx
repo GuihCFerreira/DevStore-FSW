@@ -40,7 +40,7 @@ const ProductInfo = ({product}: ProductInfoProps) => {
                 )}
             </div>
 
-            {product.discountPercent > 0 && (
+            {product.discountPercentage > 0 && (
                 <p className="line-through text-sm opacity-75">R${Number(product.basePrice).toFixed(2)}</p>
             )}
 
