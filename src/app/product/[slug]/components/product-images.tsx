@@ -9,12 +9,11 @@ interface ProductImageProps {
 }
 
 const ProductImage = ({name,imageUrls}: ProductImageProps) => {
-    const images = [imageUrls,imageUrls,imageUrls,imageUrls]
-    const [currentImage, setCurrentImage] = useState(images[0])
+    const [currentImage, setCurrentImage] = useState(imageUrls[0]);
 
-    const handleImageClick = (imageUrls : string)=>{
-        setCurrentImage(imageUrls)
-    }
+  const handleImageClick = (imageUrl: string) => {
+    setCurrentImage(imageUrl);
+  };
     return ( 
         <div className="flex flex-col">
         <div className=" flex bg-accent h-[380px] items-center w-full justify-center">
@@ -29,7 +28,28 @@ const ProductImage = ({name,imageUrls}: ProductImageProps) => {
         </div>
 
         <div className="grid grid-cols-4 gap-4 mt-8 px-5">
-        {images.map((ind)=>
+            {imageUrls.map((imageUrl) => (
+          <button
+            key={imageUrl}
+            className={`flex h-[100px] items-center justify-center rounded-lg bg-accent
+                ${
+                  imageUrl === currentImage &&
+                  "border-2 border-solid border-primary"
+                }
+            `}
+            onClick={() => handleImageClick(imageUrl)}
+          >
+            <Image
+              src={imageUrl}
+              alt={name}
+              height={0}
+              width={0}
+              sizes="100vw"
+              className="h-auto max-h-[70%] w-auto max-w-[80%]"
+            />
+          </button>
+        ))}
+            {/* {images.map((ind)=>
         <button onClick={()=> handleImageClick(ind)} key={ind}>
         <div className={`flex h-[100px] items-center justify-center rounded-lg bg-accent
         ${ind === currentImage && "border-2 border-solid border-primary" }`} >
@@ -43,7 +63,7 @@ const ProductImage = ({name,imageUrls}: ProductImageProps) => {
             />
         </div>
         </button>
-        )}
+        )} */}
         </div>
         
         </div>
