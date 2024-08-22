@@ -30,8 +30,8 @@ const ProductImage = ({name,imageUrls}: ProductImageProps) => {
 
         <div className="grid grid-cols-4 gap-4 mt-8 px-5">
         {images.map((ind)=>
-        <button onClick={()=> handleImageClick(ind)}>
-        <div key={ind} className={`flex h-[100px] items-center justify-center rounded-lg bg-accent
+        <button onClick={()=> handleImageClick(ind)} key={ind}>
+        <div className={`flex h-[100px] items-center justify-center rounded-lg bg-accent
         ${ind === currentImage && "border-2 border-solid border-primary" }`} >
             <Image
             alt={name}
