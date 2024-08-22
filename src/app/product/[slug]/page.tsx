@@ -35,7 +35,7 @@ const ProductDetailsPage = async ({params : {slug}} : ProductDetailsPageProps) =
     if(!product) return null;
     return ( 
         <div className="flex flex-col gap-8 pb-8">
-            <ProductImage imageUrls={product.imageUrl} name={product.name} />
+            <ProductImage imageUrls={product.imageUrls} name={product.name} />
             <ProductInfo  product={computeProductTotalPrice(product)} />
             <div>
             <SectionTitle>Produtos Recomendados</SectionTitle>
