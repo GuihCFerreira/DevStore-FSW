@@ -5,7 +5,7 @@ import { useState } from "react";
 
 interface ProductImageProps {
     name: string;
-    imageUrls: string;
+    imageUrls: string[];
 }
 
 const ProductImage = ({name,imageUrls}: ProductImageProps) => {
