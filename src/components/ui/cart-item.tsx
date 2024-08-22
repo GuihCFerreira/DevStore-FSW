@@ -30,7 +30,7 @@ const CartItem = ({product} : CartItemProps) => {
             <div className="flex items-center gap-4">
                 <div className="bg-accent flex items-center justify-center rounded-lg h-[77px] w-[77px]">
                     <Image 
-                        src={product.imageUrl}
+                        src={product.imageUrls[0]}
                         alt={product.name}
                         width={0}
                         height={0}
